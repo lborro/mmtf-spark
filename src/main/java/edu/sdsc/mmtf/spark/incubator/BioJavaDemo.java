@@ -23,7 +23,8 @@ public class BioJavaDemo {
 		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(BioJavaDemo.class.getSimpleName());
 	    JavaSparkContext sc = new JavaSparkContext(conf);
 		 
-	    long start = System.nanoTime();
+	    //Teste 
+		long start = System.nanoTime();
 	    List<String> pdbIds = Arrays.asList("1STP","4HHB","1JLP","5X6H","5L2G","2MK1");
 	    // read PDB in MMTF format
 	    JavaPairRDD<String, StructureDataInterface> pdb = MmtfReader.downloadMmtfFiles(pdbIds, sc);
